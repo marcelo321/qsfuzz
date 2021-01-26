@@ -168,7 +168,7 @@ func isLengthWithinTenPercent(expectedLength int, responseLength int) bool {
 	diff := int(math.Abs(float64(expectedLength) - float64(responseLength)))
 
 	// Check if the diff is less than 10%, if so, consider a positive match
-	if (diff/responseLength)*100 <= 10 {
+	if (diff/responseLength)*100 <= 2 {
 		return true
 	}
 	return false
